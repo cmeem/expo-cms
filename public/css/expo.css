@@ -1,0 +1,377 @@
+.shadow-rem {
+    -webkit-box-shadow: 0px 2px 11px -3px rgba(40, 40, 40, 0.38) !important;
+    -moz-box-shadow: 0px 2px 11px -3px rgba(40, 40, 40, 0.38) !important;
+    box-shadow: 0px 2px 11px -3px rgba(40, 40, 40, 0.38) !important;
+}
+.shadow-rem:focus {
+    -webkit-box-shadow: 0px 2px 11px -3px rgba(40, 40, 40, 0.38) !important;
+    -moz-box-shadow: 0px 2px 11px -3px rgba(40, 40, 40, 0.38) !important;
+    box-shadow: 0px 2px 11px -3px rgba(40, 40, 40, 0.38) !important;
+}
+.gray {
+    color: gray;
+}
+.gray:hover {
+    color: rgb(75, 73, 73);
+}
+.rounded-4 {
+    border-radius: 0.4rem;
+}
+.rounded-5 {
+    border-radius: 0.5rem;
+}
+.rounded-6 {
+    border-radius: 0.6rem;
+}
+.rounded-7 {
+    border-radius: 0.7rem;
+}
+.rounded-8 {
+    border-radius: 0.8rem;
+}
+.rounded-9 {
+    border-radius: 0.9rem;
+}
+.rounded-rem {
+    border-radius: 1rem;
+}
+.rounded-l-rem {
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+.rounded-r-rem {
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+.nav-light-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    font-size: 15px;
+    white-space: nowrap;
+}
+.nav-light-button:focus {
+    box-shadow: none;
+}
+
+:root {
+    --nav-width: 68px;
+    --first-color: #ffffff;
+    --first-color-light: rgb(85, 85, 85);
+    /* --first-color-light: #afa5d9; */
+    --white-color: #282828;
+    --normal-font-size: 1rem;
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--ex-gray-50);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--ex-gray-200);
+    border-radius: 100px;
+}
+body {
+    transition: 0.1s;
+}
+a {
+    text-decoration: none;
+}
+.offcanvas-start,
+.offcanvas-end {
+    width: 350px !important;
+    transition: 0.2s;
+}
+.navbar {
+    position: sticky;
+    top: 1.5rem;
+    height: 75px;
+    border: none;
+    transition: 0.1s;
+    box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.075) !important;
+    z-index: 1040;
+}
+
+.sidebar {
+    position: fixed;
+    top: 1.5rem;
+    border-top-right-radius: 1rem;
+    left: -30%;
+    width: 68px;
+    height: 100vh;
+    background-color: var(--first-color);
+    transition: 0.1s;
+    box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.075) !important;
+    z-index: 1040;
+}
+#sidebar-toggle.rotate {
+    transform: rotateY(180deg);
+    transition: 0.3s;
+}
+.logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-height: 60px;
+    border-bottom: 1px solid rgba(204, 204, 204, 0.2);
+}
+.nav_logo {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    align-items: center;
+    padding: 0.5rem 0 0.5rem 0.9rem;
+}
+.nav_logo {
+    margin-bottom: 2rem;
+}
+.nav_logo-icon,
+.nav_logo-name {
+    font-size: 1.25rem;
+    height: 35px;
+    color: var(--white-color);
+}
+.divider {
+    border-bottom: 1px solid #9797972f !important;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.nav_active {
+    border-left: 1px solid #00ccff;
+    background-color: #00ccff10;
+}
+.nav_active i,
+.nav_active span,
+.nav_active a {
+    color: #282828 !important;
+}
+.nav_active .badge {
+    color: #fdfdfd !important;
+}
+.nav_logo-name {
+    padding-left: 15px;
+}
+.nav_arrow,
+.nav_badge,
+.nav_name,
+.nav_logo-name {
+    display: none;
+    transition: 0.5s;
+    transition-duration: 0.3s;
+}
+
+.nav_link {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    align-items: center;
+    column-gap: 0.5rem;
+    position: relative;
+    align-items: center;
+    color: var(--first-color-light);
+    transition: 0.2s;
+    padding: 0rem 0 0rem 1.3rem;
+}
+
+.sidebar li .submenu {
+    list-style: none;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.sidebar li .submenu .nav_link {
+    padding: 0 0 0 1.5rem;
+}
+.nav_name {
+    font: size 14px;
+    white-space: nowrap;
+}
+.nav_icon {
+    font-size: 16px;
+}
+.nav_icon {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.submenu1 .nav_icon {
+    font-size: 14px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 3px;
+}
+.submenu2 .nav_icon {
+    font-size: 14px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.nav_link:hover {
+    color: var(--white-color);
+}
+.nav_icon {
+    font-size: 1.25rem;
+}
+
+.show-side {
+    left: 0;
+}
+
+.body-pd {
+    padding-left: calc(var(--nav-width) + 1rem);
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        padding: 0 0 0 4rem;
+    }
+
+    .sidebar li .submenu .nav_link,
+    .sidebar li .submenu2 .nav_link {
+        padding: 0rem 0 0 1.5rem;
+        margin-bottom: 10px;
+        transition: 0.2s;
+    }
+    .sidebar.show-side li .submenu .nav_link {
+        padding: 0 0 0 2rem;
+        display: flex;
+    }
+    .sidebar.show-side li .submenu2 .nav_link {
+        padding: 0 0 0 2.5rem;
+    }
+    .sidebar.show-side .nav_link {
+        padding: 0rem 0 0rem 0.8rem;
+    }
+    .sidebar.show-side .nav_arrow,
+    .sidebar.show-side .nav_badge,
+    .sidebar.show-side .nav_name,
+    .sidebar.show-side .nav_logo-name {
+        display: flex;
+        transition: 0.2s;
+        transition-duration: 0.3s;
+    }
+    .nav_link:not(.collapsed) .nav_arrow {
+        transform: rotate(90deg);
+        transition: 0.3s;
+    }
+    .nav {
+        min-width: 65px;
+        transition: 0.2s;
+    }
+    .sidebar {
+        left: 0;
+        padding: 1rem 0rem 0 0;
+    }
+    .show-side {
+        width: calc(68px + 156px);
+    }
+    .body-pd {
+        padding-left: calc(68px + 150px);
+    }
+    .show-side .nav {
+        min-width: calc(65px + 156px);
+        transition: 0.2s;
+    }
+}
+
+.sidebar_menu {
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.sidebar_menu::-webkit-scrollbar {
+    width: 5px;
+}
+
+.sidebar_menu::-webkit-scrollbar-track {
+    background-color: rgb(255, 255, 255) !important;
+    border-radius: 100px;
+}
+
+.sidebar_menu::-webkit-scrollbar-thumb {
+    background-color: #f0f0f0 !important;
+    border-radius: 100px;
+}
+/*
+// scss-docs-start gray-color-variables
+$white: #fff !default;
+$gray-50: #f7f7f7 !default;
+$gray-100: #f3f4f6 !default;
+$gray-200: #e5e7eb !default;
+$gray-300: #d1d5db !default;
+$gray-400: #9ca3af !default;
+$gray-500: #6b7280 !default;
+$gray-600: #4b5563 !default;
+$gray-700: #374151 !default;
+$gray-800: #1f2937 !default;
+$gray-900: #111827 !default;
+$black: #000 !default;
+// scss-docs-end gray-color-variables
+
+$yellow-50: #fffbeb !default;
+$yellow-100: #fef3c7 !default;
+$yellow-200: #fde68a !default;
+$yellow-300: #fcd34d !default;
+$yellow-400: #fbbf24 !default;
+$yellow-500: #f59e0b !default;
+$yellow-600: #d97706 !default;
+$yellow-700: #b45309 !default;
+$yellow-800: #92400e !default;
+$yellow-900: #78350f !default;
+$green-50: #ecfdf5 !default;
+$green-100: #d1fae5 !default;
+$green-200: #a7f3d0 !default;
+$green-300: #6ee7b7 !default;
+$green-400: #34d399 !default;
+$green-500: #10b981 !default;
+$green-600: #059669 !default;
+$green-700: #047857 !default;
+$green-800: #065f46 !default;
+$green-900: #064e3b !default;
+$blue-50: #eff6ff !default;
+$blue-100: #dbeafe !default;
+$blue-200: #bfdbfe !default;
+$blue-300: #93c5fd !default;
+$blue-400: #60a5fa !default;
+$blue-500: #3b82f6 !default;
+$blue-600: #2563eb !default;
+$blue-700: #1d4ed8 !default;
+$blue-800: #1e40af !default;
+$blue-900: #1e3a8a !default;
+$indigo-50: #eef2ff !default;
+$indigo-100: #e0e7ff !default;
+$indigo-200: #c7d2fe !default;
+$indigo-300: #a5b4fc !default;
+$indigo-400: #818cf8 !default;
+$indigo-500: #6366f1 !default;
+$indigo-600: #4f46e5 !default;
+$indigo-700: #4338ca !default;
+$indigo-800: #3730a3 !default;
+$indigo-900: #312e81 !default;
+$purple-50: #f5f3ff !default;
+$purple-100: #ede9fe !default;
+$purple-200: #ddd6fe !default;
+$purple-300: #c4b5fd !default;
+$purple-400: #a78bfa !default;
+$purple-500: #8b5cf6 !default;
+$purple-600: #7c3aed !default;
+$purple-700: #6d28d9 !default;
+$purple-800: #5b21b6 !default;
+$purple-900: #4c1d95 !default;
+$pink-50: #fdf2f8 !default;
+$pink-100: #fce7f3 !default;
+$pink-200: #fbcfe8 !default;
+$pink-300: #f9a8d4 !default;
+$pink-400: #f472b6 !default;
+$pink-500: #ec4899 !default;
+$pink-600: #db2777 !default;
+$pink-700: #be185d !default;
+$pink-800: #9d174d !default;
+$pink-900: #831843 !default; */

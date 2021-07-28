@@ -1,0 +1,34 @@
+<?php
+
+namespace Database\Seeders;
+
+use App\Modles\Post;
+use App\Models\Comments;
+use Illuminate\Database\Seeder;
+
+class DatabaseSeeder extends Seeder
+{
+    /**
+     * Seed the application's database.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        // User::factory(10)->create();
+        // Comments::factory(10)->create();
+        // Admin::factory(10)->create();
+        // \App\Models\Post::factory(153)->create();
+
+        //seeding the super user .
+        // Admin::create([
+        //     'status'=>'active',
+        //     'fullname'=>'Haitham Alabdullah',
+        //     'username'=>'Mocha16995',
+        //     'position'=>'Super Admin',
+        //     'email'=>'haithamahmad16995@gmail.com',
+        //     'phone'=>'0548765456',
+        //     'password'=>Hash::make('12345678'),
+        // ]);
+    }
+}

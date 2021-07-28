@@ -1,0 +1,457 @@
+$font-family-sans-serif: null;
+$font-family-monospace: null;
+// stylelint-enable value-keyword-case
+$font-family-base: null;
+$font-family-code: null;
+
+$red: #ef4444;
+$pink: #ec4899;
+$purple: #8b5cf6;
+$indigo: #6366f1;
+$blue: #3b82f6;
+$yellow: #f59e0b;
+$green: #10b981;
+$teal: #6ee7b7;
+$cyan: #93c5fd;
+
+$white: #fff;
+$gray-50: #f7f7f7;
+$gray-100: #f3f4f6;
+$gray-200: #e5e7eb;
+$gray-300: #d1d5db;
+$gray-400: #9ca3af;
+$gray-500: #6b7280;
+$gray-600: #4b5563;
+$gray-700: #374151;
+$gray-800: #1f2937;
+$gray-900: #111827;
+$black: #000;
+
+$yellow-50: #fffbeb;
+$yellow-100: #fef3c7;
+$yellow-200: #fde68a;
+$yellow-300: #fcd34d;
+$yellow-400: #fbbf24;
+$yellow-500: #f59e0b;
+$yellow-600: #d97706;
+$yellow-700: #b45309;
+$yellow-800: #92400e;
+$yellow-900: #78350f;
+$green-50: #ecfdf5;
+$green-100: #d1fae5;
+$green-200: #a7f3d0;
+$green-300: #6ee7b7;
+$green-400: #34d399;
+$green-500: #10b981;
+$green-600: #059669;
+$green-700: #047857;
+$green-800: #065f46;
+$green-900: #064e3b;
+$blue-50: #eff6ff;
+$blue-100: #dbeafe;
+$blue-200: #bfdbfe;
+$blue-300: #93c5fd;
+$blue-400: #60a5fa;
+$blue-500: #3b82f6;
+$blue-600: #2563eb;
+$blue-700: #1d4ed8;
+$blue-800: #1e40af;
+$blue-900: #1e3a8a;
+$indigo-50: #eef2ff;
+$indigo-100: #e0e7ff;
+$indigo-200: #c7d2fe;
+$indigo-300: #a5b4fc;
+$indigo-400: #818cf8;
+$indigo-500: #6366f1;
+$indigo-600: #4f46e5;
+$indigo-700: #4338ca;
+$indigo-800: #3730a3;
+$indigo-900: #312e81;
+$purple-50: #f5f3ff;
+$purple-100: #ede9fe;
+$purple-200: #ddd6fe;
+$purple-300: #c4b5fd;
+$purple-400: #a78bfa;
+$purple-500: #8b5cf6;
+$purple-600: #7c3aed;
+$purple-700: #6d28d9;
+$purple-800: #5b21b6;
+$purple-900: #4c1d95;
+$pink-50: #fdf2f8;
+$pink-100: #fce7f3;
+$pink-200: #fbcfe8;
+$pink-300: #f9a8d4;
+$pink-400: #f472b6;
+$pink-500: #ec4899;
+$pink-600: #db2777;
+$pink-700: #be185d;
+$pink-800: #9d174d;
+$pink-900: #831843;
+$red-50: #fef2f2;
+$red-100: #fee2e2;
+$red-200: #fecaca;
+$red-300: #fca5a5;
+$red-400: #f87171;
+$red-500: #ef4444;
+$red-600: #dc2626;
+$red-700: #b91c1c;
+$red-800: #991b1b;
+$red-900: #7f1d1d;
+
+$theme-colors: (
+    "gray-50": $gray-50,
+    "gray-100": $gray-100,
+    "gray-200": $gray-200,
+    "gray-300": $gray-300,
+    "gray-400": $gray-400,
+    "gray-500": $gray-500,
+    "gray-600": $gray-600,
+    "gray-700": $gray-700,
+    "gray-800": $gray-800,
+    "gray-900": $gray-900,
+    "yellow-50": $yellow-50,
+    "yellow-100": $yellow-100,
+    "yellow-200": $yellow-200,
+    "yellow-300": $yellow-300,
+    "yellow-400": $yellow-400,
+    "yellow-500": $yellow-500,
+    "yellow-600": $yellow-600,
+    "yellow-700": $yellow-700,
+    "yellow-800": $yellow-800,
+    "yellow-900": $yellow-900,
+    "green-50": $green-50,
+    "green-100": $green-100,
+    "green-200": $green-200,
+    "green-300": $green-300,
+    "green-400": $green-400,
+    "green-500": $green-500,
+    "green-600": $green-600,
+    "green-700": $green-700,
+    "green-800": $green-800,
+    "green-900": $green-900,
+    "blue-50": $blue-50,
+    "blue-100": $blue-100,
+    "blue-200": $blue-200,
+    "blue-300": $blue-300,
+    "blue-400": $blue-400,
+    "blue-500": $blue-500,
+    "blue-600": $blue-600,
+    "blue-700": $blue-700,
+    "blue-800": $blue-800,
+    "blue-900": $blue-900,
+    "indigo-50": $indigo-50,
+    "indigo-100": $indigo-100,
+    "indigo-200": $indigo-200,
+    "indigo-300": $indigo-300,
+    "indigo-400": $indigo-400,
+    "indigo-500": $indigo-500,
+    "indigo-600": $indigo-600,
+    "indigo-700": $indigo-700,
+    "indigo-800": $indigo-800,
+    "indigo-900": $indigo-900,
+    "purple-50": $purple-50,
+    "purple-100": $purple-100,
+    "purple-200": $purple-200,
+    "purple-300": $purple-300,
+    "purple-400": $purple-400,
+    "purple-500": $purple-500,
+    "purple-600": $purple-600,
+    "purple-700": $purple-700,
+    "purple-800": $purple-800,
+    "purple-900": $purple-900,
+    "pink-50": $pink-50,
+    "pink-100": $pink-100,
+    "pink-200": $pink-200,
+    "pink-300": $pink-300,
+    "pink-400": $pink-400,
+    "pink-500": $pink-500,
+    "pink-600": $pink-600,
+    "pink-700": $pink-700,
+    "pink-800": $pink-800,
+    "pink-900": $pink-900,
+    "red-50": $red-50,
+    "red-100": $red-100,
+    "red-200": $red-200,
+    "red-300": $red-300,
+    "red-400": $red-400,
+    "red-500": $red-500,
+    "red-600": $red-600,
+    "red-700": $red-700,
+    "red-800": $red-800,
+    "red-900": $red-900,
+);
+
+$sizes: map-merge(
+    (
+        5: 5%,
+        10: 10%,
+        15: 15%,
+        20: 20%,
+        25: 25%,
+        30: 30%,
+        35: 35%,
+        40: 40%,
+        45: 45%,
+        50: 50%,
+        55: 55%,
+        60: 60%,
+        65: 65%,
+        70: 70%,
+        75: 75%,
+        80: 80%,
+        85: 85%,
+        90: 90%,
+        95: 95%,
+        100: 100%,
+        auto: auto,
+    ),
+    ()
+);
+$variable-prefix: ex-;
+$body-bg: $gray-50;
+$body-color: $gray-900;
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    2xl: 1320px,
+    3xl: 1600px,
+);
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px,
+    2xl: 1320px,
+    3xl: 1600px,
+);
+$border-radius: 0.5rem !default;
+$border-radius-sm: 0.25rem !default;
+$border-radius-lg: 1rem !default;
+
+$line-height-lg: 1.4;
+$line-height-sm: 1.4;
+$border-color: $gray-100;
+$border-radius: 0.25rem;
+$rounded-pill: 40rem;
+$border-radius-sm: 0.1rem;
+$border-radius-lg: 0.5rem;
+$box-shadow-sm: 0px 2px 5px 2px rgba(17, 24, 39, 0.05);
+$box-shadow-lg: 0px 4px 8px 4px rgba(17, 24, 39, 0.2);
+$component-active-bg: $blue-500;
+$component-active-color: $gray-100;
+$caret-width: 0.3em;
+$transition-collapse: height 0.25s ease;
+$line-height-base: 1.4;
+$text-muted: $gray-500;
+$blockquote-small-color: $gray-500;
+$mark-padding: 0.2em;
+$table-accent-bg: rgba($white, 0.05);
+$table-hover-bg: rgba($body-color, 0.075);
+$table-border-color: $gray-100;
+$table-head-bg: $white;
+$table-bg: $white;
+$table-border-level: -7;
+$table-bg-level: -7;
+$input-btn-padding-y: 0.3rem;
+$input-btn-padding-x: 0.9rem;
+$input-btn-focus-width: 1px;
+$input-btn-padding-y-lg: 0.4rem;
+$btn-disabled-opacity: 0.5;
+$btn-link-disabled-color: $gray-500;
+$btn-block-spacing-y: 0.4rem;
+$btn-border-radius-sm: $border-radius;
+$label-margin-bottom: 0.3rem;
+$input-disabled-bg: $gray-100;
+$input-color: $gray-900;
+$input-border-color: $gray-200;
+$input-focus-border-color: lighten($component-active-bg, 40%);
+$input-placeholder-color: $gray-400;
+$input-group-addon-bg: $white;
+$custom-control-indicator-size: 1.5rem;
+$custom-control-gutter: 0.6rem;
+$custom-control-spacer-x: 1.1rem;
+$custom-control-indicator-border-color: $gray-300;
+$custom-control-label-disabled-color: $gray-400;
+$custom-radio-indicator-icon-checked: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='-4 -4 8 8'><circle r='0' fill=''/></svg>");
+$custom-switch-width: $custom-control-indicator-size * 1.85;
+$custom-select-disabled-color: $gray-400;
+$custom-select-disabled-bg: $gray-100;
+$custom-select-indicator-color: $gray-400;
+$custom-select-border-radius: $border-radius * 1.5;
+$custom-range-track-height: 0.8rem;
+$custom-range-track-bg: rgba($component-active-bg, 0.1);
+$custom-range-thumb-width: 1.1rem;
+$custom-range-thumb-disabled-bg: $gray-400;
+$form-text-margin-top: 0.25rem;
+$form-feedback-margin-top: $form-text-margin-top * 0.8;
+$form-feedback-icon-valid: none;
+$form-feedback-icon-invalid: none;
+$dropdown-border-color: rgba($black, 0.05);
+$dropdown-border-radius: $border-radius * 2;
+$dropdown-divider-bg: $gray-100;
+$dropdown-link-hover-bg: rgba($component-active-bg, 0.1);
+$dropdown-link-disabled-color: $gray-400;
+$pagination-padding-y: 0.4rem;
+$pagination-padding-x: 0.7rem;
+$pagination-line-height: 1.2;
+$pagination-border-color: $gray-100;
+$pagination-color: rgba($blue-700, 0.8);
+$pagination-border-width: 1px;
+$pagination-hover-color: rgba($blue-700, 0.8);
+$pagination-hover-bg: rgba($component-active-bg, 0.2);
+$pagination-disabled-color: $gray-400;
+$pagination-disabled-bg: $gray-200;
+$card-border-width: 0px;
+$card-border-radius: $border-radius-lg;
+$tooltip-color: $gray-200;
+$tooltip-arrow-width: 0.6rem;
+$tooltip-arrow-height: 0.4rem;
+$popover-max-width: 300px;
+$popover-border-color: $gray-200;
+$popover-header-bg: $white;
+$popover-header-padding-y: 0.4rem;
+$popover-body-padding-y: 0.5rem * 1.1;
+$popover-arrow-width: 0.8rem;
+$popover-arrow-height: 0.4rem;
+$toast-max-width: 400px;
+$toast-color: $body-color;
+$toast-background-color: $white;
+$toast-border-width: 0px;
+$toast-border-radius: 0.9rem;
+$toast-box-shadow: $box-shadow-sm;
+$toast-header-color: $body-color;
+$toast-header-background-color: $white;
+$toast-padding-x: 0.9rem;
+$toast-padding-y: 0.4rem;
+$badge-font-weight: 400;
+$badge-padding-y: 0.4em;
+$badge-padding-x: 0.6em;
+$badge-pill-padding-x: 0.7em;
+$badge-pill-border-radius: 9rem;
+$modal-content-color: $body-color;
+$modal-content-border-width: 0px;
+$modal-content-border-radius: $border-radius-lg * 2;
+$modal-backdrop-opacity: 0.6;
+$modal-content-box-shadow-sm-up: 0 0.5rem 1rem rgba($white, 0.5);
+$modal-content-box-shadow-xs: 0 0.25rem 0.5rem rgba($white, 0.5);
+$modal-header-padding-y: 0.8rem;
+$modal-fade-transform: translate(0, -100px);
+$alert-padding-x: 1.1rem;
+$alert-padding-y: 0.8rem;
+$alert-border-width: 0px;
+$alert-bg-level: -7;
+$alert-color-level: 3;
+$alert-border-level: -7;
+$alert-link-font-weight: lighter;
+$progress-height: 0.8rem;
+$progress-border-radius: 10rem;
+$progress-bar-animation-timing: 0.5s linear infinite;
+$list-group-border-color: $gray-200;
+$list-group-border-radius: $border-radius-lg;
+$list-group-disabled-color: $gray-400;
+$thumbnail-border-color: $gray-200;
+$breadcrumb-padding-y: 0.5rem;
+$breadcrumb-item-padding: 0.4rem;
+$breadcrumb-margin-bottom: 1.5rem;
+$breadcrumb-active-color: $gray-700;
+$breadcrumb-border-radius: $border-radius-lg;
+$carousel-control-width: 5%;
+$carousel-control-hover-opacity: 0.6;
+$carousel-control-transition: opacity 0.2s ease;
+$carousel-control-opacity: 0.2;
+$carousel-indicator-width: 35px;
+$carousel-indicator-hit-area-height: 5px;
+$carousel-indicator-spacer: 5px;
+$carousel-control-icon-width: 15px;
+$carousel-indicator-height: 2px;
+$spinner-border-width: 0.2em;
+$spinner-border-width-sm: 0.15e;
+$close-color: $red;
+$print-page-size: a4;
+
+// on each npm install you have to change btn-variant-loops inside /npm/bootstrap/_buttons.scss to your maxin name funtion
+@mixin button-variant-new(
+    $background,
+    $border,
+    $color: darken($background, 40%),
+    $hover-background: darken($background, 33%),
+    $hover-border: darken($background, 33%),
+    $hover-color: lighten($background, 33%),
+    $active-background: darken($background, 33%),
+    $active-border: darken($background, 33%),
+    $active-color: lighten($background, 33%),
+    $disabled-background: $background,
+    $disabled-border: $border,
+    $disabled-color: color-contrast($disabled-background)
+) {
+    color: $color;
+    @include gradient-bg($background);
+    border-color: $border;
+    @include box-shadow($btn-box-shadow);
+
+    &:hover {
+        color: $hover-color;
+        @include gradient-bg($hover-background);
+        border-color: $hover-border;
+    }
+
+    .btn-check:focus + &,
+    &:focus {
+        color: $hover-color;
+        @include gradient-bg($hover-background);
+        border-color: $hover-border;
+        @if $enable-shadows {
+            @include box-shadow(
+                $btn-box-shadow,
+                0 0 0 $btn-focus-width rgba(mix($color, $border, 15%), 0.5)
+            );
+        } @else {
+            // Avoid using mixin so we can pass custom focus shadow properly
+            box-shadow: 0
+                0
+                0
+                $btn-focus-width
+                rgba(mix($color, $border, 15%), 0.5);
+        }
+    }
+
+    .btn-check:checked + &,
+    .btn-check:active + &,
+    &:active,
+    &.active,
+    .show > &.dropdown-toggle {
+        color: $active-color;
+        background-color: $active-background;
+        // Remove CSS gradients if they're enabled
+        background-image: if($enable-gradients, none, null);
+        border-color: $active-border;
+
+        &:focus {
+            @if $enable-shadows {
+                @include box-shadow(
+                    $btn-active-box-shadow,
+                    0 0 0 $btn-focus-width rgba(mix($color, $border, 15%), 0.5)
+                );
+            } @else {
+                // Avoid using mixin so we can pass custom focus shadow properly
+                box-shadow: 0
+                    0
+                    0
+                    $btn-focus-width
+                    rgba(mix($color, $border, 15%), 0.5);
+            }
+        }
+    }
+
+    &:disabled,
+    &.disabled {
+        color: $disabled-color;
+        background-color: $disabled-background;
+        // Remove CSS gradients if they're enabled
+        background-image: if($enable-gradients, none, null);
+        border-color: $disabled-border;
+    }
+}
