@@ -4,9 +4,6 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- Bootstrap CSS -->
-    <!-- https://cdnjs.com/libraries/twitter-bootstrap/5.0.0-beta1 -->
     <link
       rel="stylesheet"
       href="{{ mix('css/app.css') }}"
@@ -111,7 +108,7 @@
           <form action="{{ route('admin.password.email') }}" method="POST">
             @csrf
             @if(Session::has('status'))
-              <div class="alert alert-success p-1 my-1">{{ session('status') }}</div>
+              <div class="alert alert-green-200 text-green-500 p-1 my-1">{{ session('status') }}</div>
             @endif
             @if(Session::has('error'))
               <div class="alert alert-danger p-1 my-1">{{ session('error') }}</div>
@@ -139,7 +136,7 @@
                 aria-label="email"
                 aria-describedby="basic-addon1"
               />
-            </div>                    
+            </div>
             <button
               class="btn btn-login mb-3 mt-1 shadow-sm"
               style="font-size: 18px; width:100%"

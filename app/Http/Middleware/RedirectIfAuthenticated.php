@@ -21,7 +21,6 @@ class RedirectIfAuthenticated
     {
 
         $guards = empty($guards) ? [null] : $guards;
-
         foreach ($guards as $guard) {
             foreach ($guards as $guard) {
                 if ($guard == 'admin' && Auth::guard($guard)->check()) {
@@ -29,7 +28,7 @@ class RedirectIfAuthenticated
                 }
                 }
                 if ($guard == 'web' && Auth::guard($guard)->check()) {
-                    return redirect('/');
+                    return redirect()->route('homepage');
                 }
         }
 

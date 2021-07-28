@@ -122,11 +122,11 @@
           <form action="{{ route('admin.login.attempt') }}" method="POST">
             @csrf
             @if(Session::has('success'))
-              <div class="alert alert-success p-1 my-1">{{ session('success') }}</div>
+              <div class="alert alert-green-200 text-green-500 p-1 my-1">{{ session('success') }}</div>
             @endif
             @if ($errors->any())
                 <div class="mt-0 mb-1 alert alert-danger p-1">
-                    <ul class="m-0 p-0 text-red-500 fw-bold" style="list-style-type:none; font-size:14px;" >
+                    <ul class="m-0 p-0 text-red-500" style="list-style-type:none; font-size:14px;" >
                         @foreach ($errors->all() as $error)
                             <li> {{ $error }}</li>
                         @endforeach

@@ -121,7 +121,20 @@
           <h1 class="h3 text-center mb-4">{{ __('Login') }}</h1>
           <form action="{{ route('admin.password.update') }}" method="POST">
             @csrf
-            
+            @if(Session::has('success'))
+              <div class="alert alert-green-300 text-green-500p-1 my-1">{{ session('success') }}</div>
+            @endif
+            @if ($errors->any())
+                <div class="mt-0 mb-1 alert alert-danger p-1">
+                    <ul class="m-0 p-0 text-red-500" style="list-style-type:none; font-size:15px;" >
+                        @foreach ($errors->all() as $error)
+                            <li> {{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @else
+            <div class="mb-3 mt-0"></div>
+            @endif
             <input type="hidden" name="token" value="{{ $token }}">
             <input type="hidden" name="email" value="{{ mb::decrypt($email) }}">
 
@@ -164,8 +177,8 @@
               @enderror
             </div>
 
-            <button 
-              type="submit" 
+            <button
+              type="submit"
               class="btn btn-login my-3 shadow-sm"
               style="font-size: 18px"
               >{{ __('Reset Password') }}
