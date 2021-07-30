@@ -19,9 +19,9 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('social_id')->nullable();
             $table->string('email')->unique();
-            $table->integer('views_count')->increment();
-            $table->integer('likes_count')->increment();
-            $table->integer('comments_count')->increment();
+            $table->integer('views_count')->increment()->default(0);
+            $table->integer('likes_count')->increment()->default(0);
+            $table->integer('comments_count')->increment()->default(0);
             $table->string('avatar')->default('/img/avatars/profile.png');;
             $table->string('avatar_original')->default('/img/avatars/profile.png');;
             $table->timestamp('email_verified_at')->nullable();

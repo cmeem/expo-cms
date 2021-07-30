@@ -16,12 +16,22 @@ $(document).ready(function () {
 
         }
     );
-    var myOffcanvas = document.getElementById("SearchOffcanvas");
-    myOffcanvas.addEventListener("shown.bs.offcanvas", function () {
-        $("#offcanvanSearch").focus();
-    });
-    var myOffcanvas = document.getElementById("SearchOffcanvas");
-    myOffcanvas.addEventListener("hidden.bs.offcanvas", function () {
-        $("#offcanvanSearch").val(null);
-    });
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-right',
+        showConfirmButton: false,
+        timer: 3000,
+        customClass: {
+        text: 'text-gray-800 mx-1',
+        title: 'text-gray-800 mx-1'
+        },
+        didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+        })
+    document.addEventListener('swal', function(e){
+        Toast.fire(e.detail);
+    })
+    $('#showProfileOffcanvas').click();
 });

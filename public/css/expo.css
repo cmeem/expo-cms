@@ -299,79 +299,25 @@ a {
     background-color: #f0f0f0 !important;
     border-radius: 100px;
 }
-/*
-// scss-docs-start gray-color-variables
-$white: #fff !default;
-$gray-50: #f7f7f7 !default;
-$gray-100: #f3f4f6 !default;
-$gray-200: #e5e7eb !default;
-$gray-300: #d1d5db !default;
-$gray-400: #9ca3af !default;
-$gray-500: #6b7280 !default;
-$gray-600: #4b5563 !default;
-$gray-700: #374151 !default;
-$gray-800: #1f2937 !default;
-$gray-900: #111827 !default;
-$black: #000 !default;
-// scss-docs-end gray-color-variables
-
-$yellow-50: #fffbeb !default;
-$yellow-100: #fef3c7 !default;
-$yellow-200: #fde68a !default;
-$yellow-300: #fcd34d !default;
-$yellow-400: #fbbf24 !default;
-$yellow-500: #f59e0b !default;
-$yellow-600: #d97706 !default;
-$yellow-700: #b45309 !default;
-$yellow-800: #92400e !default;
-$yellow-900: #78350f !default;
-$green-50: #ecfdf5 !default;
-$green-100: #d1fae5 !default;
-$green-200: #a7f3d0 !default;
-$green-300: #6ee7b7 !default;
-$green-400: #34d399 !default;
-$green-500: #10b981 !default;
-$green-600: #059669 !default;
-$green-700: #047857 !default;
-$green-800: #065f46 !default;
-$green-900: #064e3b !default;
-$blue-50: #eff6ff !default;
-$blue-100: #dbeafe !default;
-$blue-200: #bfdbfe !default;
-$blue-300: #93c5fd !default;
-$blue-400: #60a5fa !default;
-$blue-500: #3b82f6 !default;
-$blue-600: #2563eb !default;
-$blue-700: #1d4ed8 !default;
-$blue-800: #1e40af !default;
-$blue-900: #1e3a8a !default;
-$indigo-50: #eef2ff !default;
-$indigo-100: #e0e7ff !default;
-$indigo-200: #c7d2fe !default;
-$indigo-300: #a5b4fc !default;
-$indigo-400: #818cf8 !default;
-$indigo-500: #6366f1 !default;
-$indigo-600: #4f46e5 !default;
-$indigo-700: #4338ca !default;
-$indigo-800: #3730a3 !default;
-$indigo-900: #312e81 !default;
-$purple-50: #f5f3ff !default;
-$purple-100: #ede9fe !default;
-$purple-200: #ddd6fe !default;
-$purple-300: #c4b5fd !default;
-$purple-400: #a78bfa !default;
-$purple-500: #8b5cf6 !default;
-$purple-600: #7c3aed !default;
-$purple-700: #6d28d9 !default;
-$purple-800: #5b21b6 !default;
-$purple-900: #4c1d95 !default;
-$pink-50: #fdf2f8 !default;
-$pink-100: #fce7f3 !default;
-$pink-200: #fbcfe8 !default;
-$pink-300: #f9a8d4 !default;
-$pink-400: #f472b6 !default;
-$pink-500: #ec4899 !default;
-$pink-600: #db2777 !default;
-$pink-700: #be185d !default;
-$pink-800: #9d174d !default;
-$pink-900: #831843 !default; */
+.message-card{
+    background-color: var(--ex-pink-200);
+    color: var(--ex-pink-500);
+    transition:0.2s;
+}
+.message-card:hover{
+    background-color: var(--ex-pink-500);
+    color: var(--ex-white);
+}
+.message-type{
+    color: var(--ex-pink-400);
+}
+.message-card:hover .message-type{
+    color: var(--ex-white);
+}
+.message-content {
+    display: inline-block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+}

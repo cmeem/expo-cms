@@ -36,12 +36,12 @@ class Users extends Component
         if($user->status == 'active'){
             $user->update(['status'=>'inactive']);
             $this->dispatchBrowserEvent('swal',[
-                'html' =>'<span class="d-flex align-items-center  fw-bold text-gray-800 mb-2"><i class="fas fa-check fa-2x text-green-500" style="margin-right:1rem;"></i>User Status has been updated to inactive</span>',
+                'html' =>'<span class="d-flex align-items-center  fw-bold text-gray-800 mb-2"><i class="fas fa-check fa-2x text-green-500" style="margin-right:1rem;"></i>User has been deactivated</span>',
             ]);
         }elseif($user->status == 'inactive'){
             $user->update(['status'=>'active']);
             $this->dispatchBrowserEvent('swal',[
-                'html' =>'<span class="d-flex align-items-center  fw-bold text-gray-800 mb-2"><i class="fas fa-check fa-2x text-green-500" style="margin-right:1rem;"></i>User Status has been updated to active</span>',
+                'html' =>'<span class="d-flex align-items-center  fw-bold text-gray-800 mb-2"><i class="fas fa-check fa-2x text-green-500" style="margin-right:1rem;"></i>User has been activated</span>',
             ]);
         }else{
             $this->dispatchBrowserEvent('swal',[

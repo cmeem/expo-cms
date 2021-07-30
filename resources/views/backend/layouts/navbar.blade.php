@@ -21,30 +21,13 @@
         </button>
         <button
             role="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#SearchOffcanvas"
-            aria-controls="SearchOffcanvas"
-            class="btn gray hover-gray rounded-4 nav-light-button bg-white mx-2"
-        >
-            <i class="fas fa-search fa-lg"></i>
-        </button>
-        <button
-            role="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#NotificationOffcanvas"
-            aria-controls="NotificationOffcanvas"
-            class="btn gray hover-gray rounded-4 nav-light-button bg-white mx-2"
-        >
-            <i class="fas fa-bell fa-lg"></i>
-        </button>
-        <button
-            role="button"
+            id="showProfileOffcanvas"
             data-bs-toggle="offcanvas"
             data-bs-target="#ProfileOffcanvas"
             aria-controls="ProfileOffcanvas"
             class="btn gray hover-gray rounded-4 nav-light-button bg-white mx-2"
         >
-            <i class="fas fa-user fa-lg"></i>
+        <img src="{{ auth()->user()->avatar }}" width="35px" height="35px" alt="" class="rounded-circle">
         </button>
     </div>
 </div>

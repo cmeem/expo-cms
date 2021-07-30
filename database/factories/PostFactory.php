@@ -22,12 +22,12 @@ class PostFactory extends Factory
     public function definition()
     {
         return [
-            'status' => 'draft',
+            'status' => 'publish',
             'admin_id' => 1,
             'admin_username' => $this->faker->unique()->name(),
-            'likes_count' => 5113,
-            'comments_count' => 754,
-            'views_count' => 46875,
+            'likes_count' => random_int(100,10000),
+            'comments_count' => random_int(100,10000),
+            'views_count' => random_int(100,10000),
             'title' => $this->faker->unique()->name(),
             'category' => $this->faker->unique()->name(),
             'content' => Str::random(3000),

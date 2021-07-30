@@ -270,7 +270,6 @@ function delete_post(id,title) {
         confirmButtonText: 'Delete',
         cancelButtonText: 'Cancel',
         focusConfirm: false,
-        showLoading:true,
     }).then((result) => {
     if (result.isConfirmed) {
         Livewire.emit('delete_post',id)

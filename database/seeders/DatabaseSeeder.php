@@ -2,8 +2,10 @@
 
 namespace Database\Seeders;
 
+use App\Models\Post;
 use App\Models\User;
-use App\Modles\Post;
+use App\Models\Likes;
+use App\Models\Views;
 use App\Models\Comments;
 use Illuminate\Database\Seeder;
 
@@ -17,9 +19,11 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // User::factory(400)->create();
-        // Comments::factory(10)->create();
+        // Comments::factory(266)->create();
+        // Likes::factory(12287)->create();
+        // Views::factory(356)->create();
         // Admin::factory(10)->create();
-        // \App\Models\Post::factory(153)->create();
+        // Post::factory(153)->create();
 
         //seeding the super user .
         // Admin::create([

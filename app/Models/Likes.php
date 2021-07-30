@@ -12,7 +12,15 @@ class Likes extends Model
 
     protected $table = 'likes';
 
-    protected $fillable = array('admin_id','user_id','post_id','comments_id','ip_address','mac_address','defualt_lang');
+    protected $fillable = [
+        'admin_id',
+        'user_id',
+        'post_id',
+        'comments_id',
+        'ip_address'
+        ,'mac_address',
+        'defualt_lang'
+    ];
 
 
     // public function post(){
