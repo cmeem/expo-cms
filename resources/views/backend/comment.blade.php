@@ -33,7 +33,6 @@
                     <th>#</th>
                     <th>Status</th>
                     <th>writer</th>
-                    <th>content</th>
                     <th>Attachments</th>
                     <th>Created At</th>
                     <th>actions</th>
@@ -53,9 +52,6 @@
                     <td wire:key='writer_{{ $comment->id }}'>
                         <span class="fw-bold">{{ $comment->writer }}</span>
                     </td>
-                    <td wire:key='content_{{ $comment->id }}' style="max-width: 45rem;">
-                        <span class="text-wrap" >{{ $comment->content }}</span>
-                    </td>
                     <td wire:key='Attachments_{{ $comment->id }}'>
                     @if(isset($comment->Attachments))
                         @foreach (json_decode($comment->Attachments) as $file)
@@ -69,13 +65,21 @@
                         <span class="fw-bold" aria-hidden="true">{{ $comment->created_at->format('m/d/y - h:m') }}</span>
                     </td>
                     <td wire:key='actions_{{ $comment->id }}'>
-                        @if($comment->status != 'Deleted')
-                        <a wire:click='change_status({{ $comment->id }});' class="btn btn-sm btn-{{ $comment->status == 'Pending' ? 'green' : 'yellow' }}-200 fw-bold shadow-sm mx-1">
-                            {{ $comment->status == 'Pending' ? 'Approve' : 'Pending' }}
+                        <a onclick='view_comment({{ $comment->id }});' class="btn btn-sm btn-green-200 fw-bold shadow-sm mx-1">
+                            View
                         </a>
-                        <a onclick='delete_comment({{ $comment->id }});' class="btn btn-sm btn-red-200 fw-bold shadow-sm mx-1"><i class="fas fa-trash"></i></a>
+                        @if($comment->status != 'Deleted')
+                        <a
+                        wire:key='selete_{{ $comment->id }}'
+                        onclick='delete_comment({{ $comment->id }});'
+                        class="btn btn-sm btn-red-200 fw-bold shadow-sm mx-1">
+                            Delete
+                        </a>
                         @else
-                        <a wire:click='change_status({{ $comment->id }});' class="btn btn-sm btn-pink-200 d-block fw-bold shadow-sm mx-1">
+                        <a
+                        wire:key='restore_{{ $comment->id }}'
+                        wire:click='restore_comment({{ $comment->id }})'
+                        class="btn btn-sm btn-pink-200 fw-bold shadow-sm mx-1">
                             Restore
                         </a>
                         @endif
@@ -90,6 +94,10 @@
         </div>
     </div>
 
+    <div wire:ignore wire:key='view_comment_modal' class="modal fade" id="view_comment" tabindex="-1" aria-labelledby="view_comment_Label" aria-hidden="true">
+        <livewire:view-comment />
+    </div>
+    <button class="d-none hidden" id="O_view_comment" data-bs-toggle="modal" data-bs-target="#view_comment"></button>
 
 
 @section('page_style')
@@ -254,7 +262,14 @@
 @endsection
 @section('page_script')
 <script>
-
+document.addEventListener('model_dismiss',function() {
+    $('#commentModelDismiss').click();
+})
+function view_comment(id,name) {
+    Livewire.emit('getComment',id);
+    $('#O_view_comment').click();
+    $('#commentChangeStatus').focus();
+}
 function delete_comment(id,title) {
     const DeleteComment = Swal.mixin({
     customClass: {
@@ -270,7 +285,6 @@ function delete_comment(id,title) {
         confirmButtonText: 'Delete',
         cancelButtonText: 'Cancel',
         focusConfirm: false,
-        showLoading:true,
     }).then((result) => {
     if (result.isConfirmed) {
         Livewire.emit('delete_comment',id)

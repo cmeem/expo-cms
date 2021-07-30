@@ -37,7 +37,7 @@ aria-labelledby="ProfileOffcanvasLabel">
 
         </div>
 
-        <span class="text-gray-500 border-bottom">messages:&#160;&#160;&#160;&#160;&#160; </span>
+        <span class="text-gray-500 border-bottom">messages:&#160;&#160;&#160;&#160;&#160;      Soon!! </span>
         <div class="mt-1 d-flex flex-column gap-1 justify-content-center">
             <div role="button" class="card card-body pt-1 message-card">
                 <span class="message-type mb-2">message</span>

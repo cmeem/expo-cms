@@ -14,7 +14,7 @@ class Comment extends Component
     public $search;
     public $status = '';
     public $pages = 30;
-    protected $listeners = ['delete_comment'];
+    protected $listeners = ['delete_comment','change_status'];
 
     public function render()
     {
@@ -30,15 +30,15 @@ class Comment extends Component
         ]);
 
     }
-    public function change_status($id){
-            $comment = Comments::find($id);
-            if($comment->status == 'Approved' or $comment->status == 'Deleted'){
-               $new_status = 'Pending';
-            }else{
-                $new_status = 'Approved';
-            }
-            if($comment){
-                $comment->update(['status'=>$new_status]);
+    public function change_status($comment){
+            if($comment[1] == 'Approved' or $comment[1] == 'Deleted'){
+                $new_status = 'Pending';
+             }else{
+                 $new_status = 'Approved';
+             }
+            $Comment = Comments::findOrFail($comment[0]);
+            if($Comment){
+                $Comment->update(['status'=>$new_status]);
                 $this->dispatchBrowserEvent('swal',[
                     'html' =>'<span class="d-flex align-items-center fw-bold text-gray-800 mb-2"><i class="fas fa-check fa-2x text-green-500" style="margin-right:1rem;"></i>Comment has been Updated to '. $new_status .' !!</span>',
                 ]);
@@ -49,7 +49,7 @@ class Comment extends Component
             }
     }
     public function delete_comment($id){
-            $comment = Comments::find($id);
+            $comment = Comments::findOrFail($id);
             if($comment && $comment->status != 'Deleted'){
                 $comment->update(['status'=>'Deleted']);
                 $this->dispatchBrowserEvent('swal',[
@@ -60,6 +60,18 @@ class Comment extends Component
                     'html' =>'<span class="d-flex align-items-center fw-bold text-gray-800 mb-2"><i class="fas fa-times fa-2x text-red-500" style="margin-right:1rem;"></i>You don\'t have permission to delete this comment</span>',
                 ]);
             }
-
+    }
+    public function restore_comment($id){
+        $comment = Comments::findOrFail($id);
+        if($comment && $comment->status == 'Deleted'){
+            $comment->update(['status'=>'Pending']);
+            $this->dispatchBrowserEvent('swal',[
+                'html' =>'<span class="d-flex align-items-center fw-bold text-gray-800 mb-2"><i class="fas fa-check fa-2x text-green-500" style="margin-right:1rem;"></i>Comment has been Restored !!</span>',
+        ]);
+        }else{
+            $this->dispatchBrowserEvent('swal',[
+                'html' =>'<span class="d-flex align-items-center fw-bold text-gray-800 mb-2"><i class="fas fa-times fa-2x text-red-500" style="margin-right:1rem;"></i>You don\'t have permission to delete this comment</span>',
+            ]);
+        }
     }
 }

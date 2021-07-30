@@ -33,5 +33,4 @@ $(document).ready(function () {
     document.addEventListener('swal', function(e){
         Toast.fire(e.detail);
     })
-    $('#showProfileOffcanvas').click();
 });
