@@ -162,17 +162,17 @@
           </div>
           <div class="d-flex justify-content-center my-4">
             <a
-            href=""
+            href="{{ route('social.login','google') }}"
             class="btn rounded-circle mx-3 d-flex justify-content-center align-items-center social-login google">
                 <i class="fab fa-google"></i>
             </a>
             <a
-            href=""
+            href="{{ route('social.login','facebook') }}"
             class="btn rounded-circle mx-3 d-flex justify-content-center align-items-center social-login facebook">
                 <i class="fab fa-facebook-f"></i>
             </a>
             <a
-            href=""
+            href="{{ route('social.login','twitter') }}"
             class="btn rounded-circle mx-3 d-flex justify-content-center align-items-center social-login twitter">
                 <i class="fab fa-twitter"></i>
             </a>

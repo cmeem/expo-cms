@@ -166,6 +166,7 @@ return [
          * Package Service Providers...
          */
         App\Providers\MbServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -227,7 +228,13 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+
+         /*
+         * Package aliases ...
+         */
         'mb' => App\Classes\Mb::class,
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
 
     ],
 

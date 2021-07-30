@@ -101,6 +101,9 @@
         <div class="card-body p-3">
           <h1 class="h3 text-center text-gray-800 fw-bold mb-4">{{ __('Login') }}</h1>
           <form action="{{ route('login') }}" method="POST">
+            @if(Session::has('error'))
+                <div class="text-red-500 text-center">{{ session()->get('error') }}</div>
+            @endif
             @csrf
             <div class="mb-3 py-3">
               <label class="">Email</label>
@@ -152,17 +155,17 @@
           </div>
           <div class="d-flex justify-content-center my-4">
             <a
-            href=""
+            href="{{ route('social.login','google') }}"
             class="btn rounded-circle mx-3 d-flex justify-content-center align-items-center social-login google">
                 <i class="fab fa-google"></i>
             </a>
             <a
-            href=""
+            href="{{ route('social.login','facebook') }}"
             class="btn rounded-circle mx-3 d-flex justify-content-center align-items-center social-login facebook">
                 <i class="fab fa-facebook-f"></i>
             </a>
             <a
-            href=""
+            href="{{ route('social.login','twitter') }}"
             class="btn rounded-circle mx-3 d-flex justify-content-center align-items-center social-login twitter">
                 <i class="fab fa-twitter"></i>
             </a>

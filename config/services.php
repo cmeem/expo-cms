@@ -39,9 +39,9 @@ return [
     ],
 
     'google' => [
-        'client_id' => env('GOOGLE_CLIENT_ID'),
-        'client_secret' => env('GOOGLE_CLIENT_SECRET'),
-        'redirect' => env('GOOGLE_REDIRECT_URI')
+        'client_id' => env('GOOGLE_CLIENT_ID','251673558590-nml3lcajd52pk2fichbf0dlbg6dkis8m.apps.googleusercontent.com'),
+        'client_secret' => env('GOOGLE_CLIENT_SECRET','vNfoQOVxNTJV361Ec7pLAadi'),
+        'redirect' => env('GOOGLE_REDIRECT_URI','http://localhost:8002/social-login/google/callback')
     ],
 
     'apple' => [

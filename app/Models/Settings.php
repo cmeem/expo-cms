@@ -11,7 +11,12 @@ class Settings extends Model
 
     protected $table = 'settings';
 
-    protected $fillable = array('admin_id','key','value','defualt_value');
+    protected $fillable = [
+        'admin_id',
+        'key',
+        'value',
+        'defualt_value'
+    ];
 
     public function admin(){
         return $this->belongsTo(Admin::class);

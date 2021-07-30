@@ -44,8 +44,8 @@ Route::get('/comments',App\Http\Controllers\Backend\Comment::class)->name('admin
 Route::get('/categories',App\Http\Controllers\Backend\Categories::class)->name('admin.categories');
 Route::get('/archive',App\Http\Controllers\Backend\Archive::class)->name('admin.archive');
 //settings routes
-Route::get('/seo',App\Http\Controllers\Backend\Settings\Seo::class)->name('admin.seo');
 Route::get('/profile',App\Http\Controllers\Backend\Settings\Profile::class)->name('admin.profile');
+Route::get('/users',App\Http\Controllers\Backend\Settings\Users::class)->name('admin.users');
 
 });
 

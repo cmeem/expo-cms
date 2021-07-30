@@ -18,4 +18,6 @@ use Illuminate\Support\Facades\Route;
 
 
 Auth::routes();
+Route::get('/social-login/{serviceProvider}/redirect', [App\Http\Controllers\Auth\LoginController::class,'redirectToProvider'])->name('social.login');
+Route::get('/social-login/{serviceProvider}/callback', [App\Http\Controllers\Auth\LoginController::class,'handleProviderCallback'] );
 Route::get('/', [App\Http\Controllers\UserController::class, 'index'])->name('homepage');

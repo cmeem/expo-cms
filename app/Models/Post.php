@@ -2,8 +2,6 @@
 
 namespace App\Models;
 
-use App\Models\Views;
-use App\Models\Comments;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -13,8 +11,20 @@ class Post extends Model
 
     protected $table = 'posts';
 
-    protected $fillable = array('status','admin_id','admin_username','likes_count','comments_count','views_count','title','category','content','tags','attachments_names','attachments');
-
+    protected $fillable =[
+        'status',
+        'admin_id',
+        'admin_username',
+        'title',
+        'category',
+        'likes_count',
+        'comments_count',
+        'views_count',
+        'content',
+        'tags',
+        'attachments_names',
+        'attachments'
+    ];
     // public function likes(){
 
     //     return $this->hasMany(Likes::class);

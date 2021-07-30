@@ -9,7 +9,14 @@ class SidebarMenu extends Model {
     public $timestamps = false;
     protected $table = 'sidebar_menu';
 
-    protected $fillable = array('parent_id','title','url','icon' ,'order'.'permission');
+    protected $fillable = [
+        'parent_id',
+        'title',
+        'url',
+        'icon',
+        'order',
+        'permission'
+    ];
 
 
 }
