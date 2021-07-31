@@ -11,7 +11,16 @@ class Comments extends Model
 
     protected $table = 'comments';
 
-    protected $fillable = array('admin_id','user_id','post_id','comments_id','writer','status','content','attachments');
+    protected $fillable = [
+        'admin_id',
+        'user_id',
+        'post_id',
+        'comments_id',
+        'writer',
+        'status',
+        'content',
+        'attachments',
+    ];
 
 
 }

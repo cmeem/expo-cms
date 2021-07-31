@@ -17,9 +17,9 @@ class Likes extends Model
         'user_id',
         'post_id',
         'comments_id',
-        'ip_address'
-        ,'mac_address',
-        'defualt_lang'
+        'ip_address',
+        'mac_address',
+        'defualt_lang',
     ];
 
 

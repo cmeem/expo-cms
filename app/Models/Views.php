@@ -12,6 +12,11 @@ class Views extends Model
 
     protected $table = 'views';
 
-    protected $fillable = array('post_id','ip_address','mac_address','defualt_lang');
+    protected $fillable = [
+        'post_id',
+        'ip_address',
+        'mac_address',
+        'defualt_lang',
+    ];
 
 }

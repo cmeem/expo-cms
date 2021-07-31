@@ -31,7 +31,6 @@ class CommentsFactory extends Factory
            'status'=>'Approved',
            'content'=>Str::random(200),
            'attachments'=>NULL,
-            //
         ];
     }
 }

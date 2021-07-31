@@ -27,7 +27,7 @@ class ViewsFactory extends Factory
             'user_id'=>random_int(1,407),
             'ip_address'=>random_int(0,255).'.'.random_int(0,255).'.'.random_int(0,255).'.'.random_int(0,255),
             'mac_address'=>Str::random(2).':'.Str::random(2).':'.Str::random(2).':'.Str::random(2).':'.Str::random(2).':'.Str::random(2),
-            'defualt_lang'=>'en'
+            'defualt_lang'=>'en',
         ];
     }
 }
