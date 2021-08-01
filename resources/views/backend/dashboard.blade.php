@@ -70,7 +70,7 @@
             {{ $weekReport->container() }}
         </div>
         <div class="col-12 col-lg-4 col-3xl-2 card card-body p-2" >
-            <span class="h6 fw-bold text-gray-700" style="font-size:14px">Goals of {{ $cerrentDate[1] }}</span>
+            <span class="h6 fw-bold text-gray-700" style="font-size:14px">Totals of {{ $cerrentDate[1] }}</span>
             <div id="month_report" class=""></div>
         </div>
     </div>
@@ -93,42 +93,38 @@
     {{ $weekReport->script() }}
     {{ $yearReport->script() }}
     <script>
-        // monthly report start
         var options = {
-            series: [{{ $monthReport[0] }}, {{ $monthReport[1] }}, {{ $monthReport[2] }}],
+          series: [{{ $monthReport[0] }}, {{ $monthReport[1] }}, {{ $monthReport[2] }}],
           chart: {
           height: 500,
-          type: 'radialBar',
+          type: 'donut',
         },
-        plotOptions: {
-          radialBar: {
-            dataLabels: {
-              name: {
-                fontSize: '26px',
-              },
-              value: {
-                fontSize: '22px',
-                formatter: function(val) {
-                  return parseInt(val);
-                },
-              },
-              total: {
-                show: true,
-                label: 'Total Point of {{ $cerrentDate[1] }}',
-                formatter: function (w) {
-                  return {{ $monthReport[0] + $monthReport[1]  +$monthReport[2] }}
-                }
-              }
+        dataLabels: {
+          enabled: false
+        },
+        responsive: [{
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 200
+            },
+            legend: {
+              show: false
             }
           }
+        }],
+        legend: {
+          position: 'right',
+          offsetY: 0,
+          height: 230,
         },
         labels: ['Views', 'Likes', 'Comments'],
+        colors:['#FF0000','#ffc107','#BE0AFF']
         };
+
         var chart = new ApexCharts(document.querySelector("#month_report"), options);
         chart.render();
-        // monthly report ends
 
-        //
     </script>
 @endsection
 </div>

@@ -1,4 +1,4 @@
-<div class="sidebar {{ config('settings.sidebar_visibility') == 'visible' ? 'show-side' : '' }}" id="main-sidebar">
+<div class="sidebar {{ config('admin_settings.sidebar_visibility') == 'visible' ? 'show-side' : '' }}" id="main-sidebar">
     <nav class="logo mb-3">
         <a href="#" class="nav_logo">
           <img src="{{ asset('img/logo.png') }}" alt="" class="nav_logo-icon">

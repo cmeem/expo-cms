@@ -20,4 +20,21 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 Route::get('/social-login/{serviceProvider}/redirect', [App\Http\Controllers\Auth\LoginController::class,'redirectToProvider'])->name('social.login');
 Route::get('/social-login/{serviceProvider}/callback', [App\Http\Controllers\Auth\LoginController::class,'handleProviderCallback'] );
-Route::get('/', [App\Http\Controllers\UserController::class, 'index'])->name('homepage');
+
+// public routes goes here
+Route::middleware('web')->group(function(){
+    Route::get('/', [App\Http\Controllers\GuestController::class, 'index'])->name('homepage');
+    Route::get('/{staticPage}', [App\Http\Controllers\GuestController::class, 'showStaticPages'])
+            ->where('staticPage',strtolower(config('settings.static_pages','About|Contact-us|Terms|Conditions')))->name('static.pages');
+    // Route::get('/{slag}', [App\Http\Controllers\GuestController::class, 'index'])->name('homepage');
+
+
+});
+
+// // auth users routes goes here
+// Route::prefix(env('APP_NAME'))->middleware('auth:web')->group(function(){
+//     Route::get('/profile', [App\Http\Controllers\UserController::class, 'index'])->name('user.account');
+//     Route::get('/settings', [App\Http\Controllers\UserController::class, 'index'])->name('user.account');
+
+
+// });

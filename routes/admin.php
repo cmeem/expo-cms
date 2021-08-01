@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::prefix(env('APP_NAME'))->group(function(){
+Route::prefix(strtolower(config('settings.app_name','expo')))->group(function(){
 
 //login routes
 Route::get('/login',[App\Http\Controllers\Backend\Auth\AdminLoginController::class,'showLoginForm'])->name('admin.login.form');
@@ -30,22 +30,29 @@ Route::get('/password/reset/{email}/{token}',[App\Http\Controllers\Backend\Auth\
 Route::get('/logout',[App\Http\Controllers\Backend\Auth\AdminLoginController::class,'logout'])->name('admin.logout');
 
 });
+Route::prefix(strtolower(config('settings.app_name','expo')))->middleware('auth:admin')->group(function(){
 
-Route::prefix(env('APP_NAME'))->middleware('auth:admin')->group(function(){
 //application backend routes
 Route::get('/',App\Http\Controllers\Backend\Dashboard::class)->name('admin.dashboard');
+
 //posts routes
 Route::get('/posts',App\Http\Controllers\Backend\Posts::class)->name('admin.posts');
 Route::get('/posts/create',App\Http\Controllers\Backend\CreatePost::class)->name('admin.posts.create');
 Route::get('/posts/{post}/edit',App\Http\Controllers\Backend\EditPost::class)->name('admin.posts.edit');
 Route::get('/posts/{post}/view',App\Http\Controllers\Backend\ViewPost::class)->name('admin.posts.view');
+
 // comments, categories and archive routes
 Route::get('/comments',App\Http\Controllers\Backend\Comment::class)->name('admin.comments');
 Route::get('/categories',App\Http\Controllers\Backend\Categories::class)->name('admin.categories');
 Route::get('/archive',App\Http\Controllers\Backend\Archive::class)->name('admin.archive');
-//settings routes
-Route::get('/profile',App\Http\Controllers\Backend\Settings\Profile::class)->name('admin.profile');
+
+//website routes
+Route::get('/seo',App\Http\Controllers\Backend\Settings\Seo::class)->name('admin.seo');
+Route::get('/static-pages',App\Http\Controllers\Backend\Settings\StaticPages::class)->name('admin.static.pages');
+
+//users routes
 Route::get('/users',App\Http\Controllers\Backend\Settings\Users::class)->name('admin.users');
+Route::get('/profile',App\Http\Controllers\Backend\Settings\Profile::class)->name('admin.profile');
 
 });
 

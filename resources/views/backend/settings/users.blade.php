@@ -65,7 +65,7 @@
                     </td>
                     <td wire:key='actions_{{ $user->id }}'>
                         <a wire:click='change_status({{ $user->id }});' class="btn btn-sm btn-{{ $user->status == 'inactive' ? 'green' : 'red' }}-200 fw-bold shadow-sm mx-1">
-                            {{ $user->status == 'inactive' ? 'active' : 'inactive' }}
+                            {{ $user->status == 'inactive' ? 'active' : 'deactive' }}
                         </a>
                         <a onclick='delete_user({{ $user->id }},"{{ $user->name }}");' class="btn btn-sm btn-red-200 fw-bold shadow-sm mx-1"><i class="fas fa-trash"></i></a>
                     </td>
